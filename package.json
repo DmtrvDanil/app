@@ -6,12 +6,16 @@
   "scripts": {
     "start": "webpack serve --config webpack.config.js --mode development --open",
     "build": "webpack --config webpack.config.js --mode production",
-    "test": "jest"
+    "test": "jest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://myusername.github.io/my-app",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.5.3"
